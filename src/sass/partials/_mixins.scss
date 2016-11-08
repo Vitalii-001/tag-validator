@@ -1,0 +1,84 @@
+//Mixin for media queries
+@mixin mq($point) {
+
+  $mq-xlg: "all and (min-width: 1600px)";
+  $mq-lg: "all and (min-width: 1200px) and (max-width: 1599px)";
+  $mq-md: "all and (min-width: 992px) and (max-width: 1199px)";
+  $mq-sm: "all and (min-width: 768px) and (max-width: 991px)";
+  $mq-xs: "all and (max-width: 767px)";
+  $mq-xxs: "all and (max-width: 479px)";
+  $mq-xxxs: "all and (max-width: 320px)";
+
+  @if $point == lg {
+    @media #{$mq-lg} { @content; }
+  }
+  @else if $point == xlg {
+    @media #{$mq-xlg}  { @content; }
+  }
+  @else if $point == md {
+    @media #{$mq-md} { @content; }
+  }
+  @else if $point == sm {
+    @media #{$mq-sm} { @content; }
+  }
+  @else if $point == xs {
+    @media #{$mq-xs}  { @content; }
+  }
+  @else if $point == xxs {
+    @media #{$mq-xxs}  { @content; }
+  }
+  @else if $point == xxxs {
+    @media #{$mq-xxxs}  { @content; }
+  }
+
+}
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+//Mixin for portfolio tabs bg
+
+@mixin bg-cover {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+@mixin ultralight-font{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+}
+@mixin light-font{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+@mixin regular-font{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+@mixin bold-font{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+}
+@mixin demibold-font{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+}

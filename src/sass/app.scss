@@ -1,0 +1,14 @@
+@import "bootstrap/bootstrap";
+/*vendor*/
+
+/*themes*/
+@import "partials/mixins";
+@import "partials/general";
+@import "partials/variables";
+
+/*modules*/
+@import "modules/header";
+@import "modules/footer";
+@import "modules/uiselect";
+
+

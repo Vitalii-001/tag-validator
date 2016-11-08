@@ -1,0 +1,27 @@
+header {
+  background-color: #1a1d25;
+  color: white;
+  height: 70px;
+  .container-flex {
+    align-items:center;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+  .left-header {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    .logo {
+      line-height: 45px;
+    }
+  }
+  a {
+    color: white;
+  }
+}
+.main-menu {
+  &__item {
+    float: left;
+    margin: 0 10px;
+  }
+}
