@@ -7,7 +7,7 @@
     'use strict';
 
     angular
-        .module('app.sidebar')
+        .module('app.header')
         .directive('sidebar', sidebar);
 
     sidebar.$inject = ['$rootScope', '$timeout', '$window', 'Utils'];
@@ -19,7 +19,7 @@
             // controllerAs: 'vm',
             link: link,
             restrict: 'EA',
-            template: '<nav class="sidebar" ng-transclude></nav>',
+            template: '<nav class="header" ng-transclude></nav>',
             transclude: true,
             replace: true
             // scope: {}
@@ -41,7 +41,7 @@
               subNav.trigger('mouseleave');
               subNav = toggleMenuItem( $(this), $sidebar);
 
-              // Used to detect click and touch events outside the sidebar          
+              // Used to detect click and touch events outside the header
               sidebarAddBackdrop();
 
             }
@@ -61,13 +61,13 @@
           // Adjustment on route changes
           $rootScope.$on('$stateChangeStart', function(event, toState) {
             currentState = toState.name;
-            // Hide sidebar automatically on mobile
+            // Hide header automatically on mobile
             asideToggleOff();
 
             $rootScope.$broadcast('closeSidebarMenu');
           });
 
-      	  // Autoclose when click outside the sidebar
+      	  // Autoclose when click outside the header
           if ( angular.isDefined(attrs.sidebarAnyclickClose) ) {
             
             var wrapper = $('.wrapper');
@@ -80,11 +80,11 @@
           //////
 
           function watchExternalClicks(newVal) {
-            // if sidebar becomes visible
+            // if header becomes visible
             if ( newVal === true ) {
               $timeout(function(){ // render after current digest cycle
                 wrapper.on(sbclickEvent, function(e){
-                  // if not child of sidebar
+                  // if not child of header
                   if( ! $(e.target).parents('.aside').length ) {
                     asideToggleOff();
                   }
@@ -112,7 +112,7 @@
           });
         }
 
-        // Open the collapse sidebar submenu items when on touch devices 
+        // Open the collapse header submenu items when on touch devices
         // - desktop only opens on hover
         function toggleTouchItem($element){
           $element
@@ -165,8 +165,8 @@
 
         function removeFloatingNav() {
           $('.dropdown-backdrop').remove();
-          $('.sidebar-subnav.nav-floating').remove();
-          $('.sidebar li.open').removeClass('open');
+          $('.header-subnav.nav-floating').remove();
+          $('.header li.open').removeClass('open');
         }
     }
 

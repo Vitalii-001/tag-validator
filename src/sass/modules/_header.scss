@@ -6,12 +6,12 @@ header {
     align-items:center;
     flex-flow: row wrap;
     justify-content: space-between;
+    height: 100%;
   }
   .left-header {
-    width: 40%;
-    display: flex;
-    justify-content: space-between;
+    width: 50%;
     .logo {
+      float: left;
       line-height: 45px;
     }
   }
@@ -20,8 +20,13 @@ header {
   }
 }
 .main-menu {
+  margin-top: 15px;
+  margin-bottom: 0;
+  float: right;
   &__item {
     float: left;
     margin: 0 10px;
+    font-size: 13px;
+    text-transform: uppercase;
   }
 }

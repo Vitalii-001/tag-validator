@@ -2,5 +2,5 @@
     'use strict';
 
     angular
-        .module('app.sidebar', []);
+        .module('app.header', []);
 })();

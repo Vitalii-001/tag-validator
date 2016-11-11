@@ -5881,9 +5881,9 @@ button .text-el {
 .btn {
   border-radius: 0;
   padding: 9px 40px;
-  font-size: 16px;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 700; }
+  font-size: 14px;
+  text-transform: uppercase;
+  transition: all .3s ease; }
 
 .btn-default {
   color: #484848;
@@ -5906,6 +5906,12 @@ button .text-el {
 .btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus, .close:focus {
   outline: none;
   box-shadow: none; }
+
+.btn-scan {
+  background-color: #29334c; }
+  .btn-scan:hover {
+    background-color: #4b505d;
+    color: #fff; }
 
 /*/end buttons*/
 /*input*/
@@ -6199,19 +6205,25 @@ header {
   header .container-flex {
     align-items: center;
     flex-flow: row wrap;
-    justify-content: space-between; }
+    justify-content: space-between;
+    height: 100%; }
   header .left-header {
-    width: 40%;
-    display: flex;
-    justify-content: space-between; }
+    width: 50%; }
     header .left-header .logo {
+      float: left;
       line-height: 45px; }
   header a {
     color: white; }
 
-.main-menu__item {
-  float: left;
-  margin: 0 10px; }
+.main-menu {
+  margin-top: 15px;
+  margin-bottom: 0;
+  float: right; }
+  .main-menu__item {
+    float: left;
+    margin: 0 10px;
+    font-size: 13px;
+    text-transform: uppercase; }
 
 .h-footer {
   height: 75px; }

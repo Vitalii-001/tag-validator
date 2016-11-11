@@ -28,7 +28,7 @@
           .state('monitoring', {
               url: '/',
               templateUrl: helper.basepath('app.html'),
-              resolve: helper.resolveFor('fastclick', 'modernizr', 'icons', 'screenfull', 'animo', 'slimscroll', 'classyloader', 'toaster', 'whirl')
+              resolve: helper.resolveFor('ui.select')
           });
 
     } // routesConfig

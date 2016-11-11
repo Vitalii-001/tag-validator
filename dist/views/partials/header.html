@@ -13,11 +13,12 @@
       </ul>
    </div>
    <div class="right-header">
-      <button class="btn btn-default">Create scan</button>
-      <ui-select ng-model="uisel.address.selected" theme="bootstrap" ng-disabled="uisel.disabled" reset-search-input="false">
-         <ui-select-match placeholder="Enter an address...">{{$select.selected.formatted_address}}</ui-select-match>
-         <ui-select-choices repeat="address in uisel.addresses track by $index" refresh="uisel.refreshAddresses($select.search)" refresh-delay="0">
-            <div ng-bind-html="address.formatted_address | highlight: $select.search"></div>
+      <button class="btn btn-scan">Create scan</button>
+      <ui-select ng-model="headerVm.multipleDemo.selectedPeopleSimple" theme="bootstrap">
+         <ui-select-match>&lt;{{$select.selected.name}}&gt;</ui-select-match>
+         <ui-select-choices repeat="person in headerVm.ikea">
+            <div ng-bind-html="person.name"></div>
+            <small ng-bind-html="person.email"></small>
          </ui-select-choices>
       </ui-select>
    </div>

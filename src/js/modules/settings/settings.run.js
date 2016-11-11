@@ -45,7 +45,7 @@
         $localStorage.layout = $rootScope.app.layout;
       }, true);
 
-      // Close submenu when sidebar change from collapsed to normal
+      // Close submenu when header change from collapsed to normal
       $rootScope.$watch('app.layout.isCollapsed', function(newValue) {
         if( newValue === false )
           $rootScope.$broadcast('closeSidebarMenu');

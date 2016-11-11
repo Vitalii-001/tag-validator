@@ -1,0 +1,17 @@
+.container.container-flex
+    .left-header
+        .logo <img src="dist/img/logo.jpg">
+        ul.main-menu
+            li.main-menu__item
+                a(ui-sref="app.monitoring") monitoring
+            li.main-menu__item
+                a(ui-sref="app.scans") scans
+            li.main-menu__item
+                a(ui-sref="app.management") user management
+    .right-header
+        button.btn.btn-scan Create scan
+        ui-select(ng-model='headerVm.multipleDemo.selectedPeopleSimple', theme='bootstrap')
+            ui-select-match &lt;{{$select.selected.name}}&gt;
+            ui-select-choices(repeat='person in headerVm.ikea')
+                div(ng-bind-html='person.name')
+                small(ng-bind-html='person.email')

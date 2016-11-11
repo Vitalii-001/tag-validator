@@ -66,8 +66,9 @@ button {
 .btn {
   border-radius: 0;
   padding: 9px 40px;
-  font-size: 16px;
-  @include bold-font();
+  font-size: 14px;
+  text-transform: uppercase;
+  transition: all .3s ease;
 }
 .btn-default {
   color: #484848;
@@ -90,6 +91,14 @@ button {
   outline: none;
   box-shadow: none;
 }
+.btn-scan {
+  background-color: #29334c;
+  &:hover {
+    background-color: #4b505d;
+    color: #fff;
+  }
+}
+
 /*/end buttons*/
 
 /*input*/

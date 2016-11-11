@@ -18,7 +18,7 @@
         .module('angle', [
             'app.core',
             'app.routes',
-            'app.sidebar',
+            'app.header',
             'app.navsearch',
             'app.preloader',
             'app.loadingbar',
